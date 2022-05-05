@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -28,6 +28,7 @@ namespace BugTrackerUI
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddSingleton<IBugService, BugService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
